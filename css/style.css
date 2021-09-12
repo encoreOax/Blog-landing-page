@@ -21,10 +21,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body {
     font-family: 'Overpass', sans-serif;
     color: var(--primary-very-dark-blue-headings);
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+header {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
 }
 a {
     text-decoration: none;
@@ -32,71 +42,178 @@ a {
 li {
     list-style: none;
 }
+h1 {
+    font-size: 2.4rem;
+}
+p {
+    font-size: 1rem;
+}
+h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+h3 {
+    margin: 2rem 0;
+    padding: 0 3rem;
+    font-size: 1.625rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+main {
+    text-align: center;
+}
+article {
+    padding: 0 2rem;
+}
+.container {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+}
+
 .flex {
     display:flex;
 
 }
-.flex-column {
+.spacer {
+    width: 80%;
+    height: 8vh;
+    margin: 0 auto;
+}
+.padding-top {
+    padding-top: 3.625rem;
+}   
+
+.nav {
+    display: none;
+    border: solid 5px red;
+    background-color: white; 
+    padding: 1.15rem 0 1.15rem 0;
+    position: absolute;
+    top:7%;
+    right: 5%;
+    left: 5%;
+    bottom: 20%;
+}
+.nav ul li ul {
+    display: none;
+}
+.top {
+    position: relative;
+    width: 100%;
+    height: 78vh;
+    background: 
+    linear-gradient(to bottom, 
+    var(--gradient-mobile-nav-very-light-red), 
+    var(--gradient-mobile-nav-light-red)  
+    );
+    border-end-start-radius: 6.25em;
+    overflow: hidden;   
+    z-index: 0; 
+}
+.hero-bg {
+    position: absolute;
+    background-image: url(/images/bg-pattern-intro.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 230%;
+    height: 230%;
+    top: -44%;
+    right: -47%;
+    opacity: 0.7;
+    z-index: -1;
+}
+.circles_bg {
+    position: relative;
+    background-image: url(/images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.logo {
+    width: 100.625px;
+    height: 39.432px;
+    background-image: url(/images/logo.svg);
+    background-repeat: no-repeat;
+    color: transparent;
+}
+.hamburger {
+    margin: auto 0;
+    width: 40px;
+    height: 24px;
+
+}
+.cta_button {
+    background-color: var(--neutral-white-text);
+
+    color: var(--primary-light-red-CTA-text);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    margin: 1rem 0.3rem;
+    padding: 1em 1rem;
+    border-radius: 2rem;
+    border: solid 0.1rem white;
+  
+}
+._clear {
+    padding: 1em 1.5rem;
+    background-color: transparent;
+    color: var(--neutral-white-text);
+
+}
+.hero {
+    color: var(--neutral-white-text);
+    padding: 0.7rem;
+    text-align: center;
+}
+.hero p {
+    padding: 0rem 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.hero h2 {
+    padding: 0.5rem;
+
+}
+._wh-max {
+    width: 100%;
+    height: 100%;
+}
+._column {
     flex-direction: column;
     justify-content: center;
 }
 
-.auto-margin {
+._margin-auto {
     margin: 0 auto;
 }
-.block {
+._block {
     display: block;
 }
 
-.hero {
+._width-max {
     width: 100%;
 
 }
-.display-fit {
+._just-c-sb {
     justify-content: space-between;
 
 }
-.margin-zone {
-    margin: 1.1875em 1em;
+._just-c-c {
+    justify-content: center;
 }
-.button {
-    background-color: var(--primary-bright-blue);
-    margin: 1rem auto;
-    padding: 1em 0;
-    box-shadow: 0 1em 1.5em -0.6em var(--neutral-desaturated-blue);
-}
-.hiden {
+._hiden {
     display: none;
 }
-.spacer {
-    width: 80%;
-    height: 1vh;
-    margin: 0 auto;
+.green-box {
+    border: solid 5px green;
 }
-#navbar {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        background: 
-        linear-gradient(90deg, 
-        var(--gradient-mobile-nav-very-light-red), 
-        var(--gradient-mobile-nav-light-red)  
-        );
-}
-#navbar nav {
-    display: flex;
-    flex-direction: column;
-    background-color: white; 
-    display: block; 
-    width: 80vw; 
-    height: fit-content;
-    margin: 0 auto;
-    padding: 1.15rem 0 1.15rem 0;
-    /* font-family: 'Ubuntu', sans-serif; */
-}
-#navbar nav ul li, nav a {
 
-    margin: 0 auto;
-}
+
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
