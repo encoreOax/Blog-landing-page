@@ -37,6 +37,7 @@ header {
     overflow: hidden;
 }
 a {
+    color: inherit;
     text-decoration: none;
 }
 li {
@@ -54,7 +55,7 @@ h2 {
 }
 h3 {
     margin: 2rem 0;
-    padding: 0 3rem;
+    padding: 0 2.5rem;
     font-size: 1.625rem;
     font-weight: 600;
     line-height: 1.8rem;
@@ -108,8 +109,41 @@ article {
     );
     border-end-start-radius: 6.25em;
     overflow: hidden;   
+    color: var(--neutral-white-text);
     z-index: 0; 
 }
+.midle {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow:hidden ;
+    background: 
+    linear-gradient(to bottom, 
+    var(--gradient-body-very-dark-gray-blue), 
+    var(--gradient-body-very-dark-desaturated-blue)  
+    );
+    border-end-start-radius: 6.25em;
+    border-start-end-radius: 6.25em;
+    color: var(--neutral-grayish-blue-footer-text);
+    z-index: 0; 
+}
+.midle h2 {
+    color: var(--neutral-white-text);
+}
+.footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: 
+    linear-gradient(to bottom, 
+    var(--neutral-very-dark-black-blue-footer-background), 
+    var(--gradient-body-very-dark-gray-blue)  
+    );
+    border-start-end-radius: 6.25em;
+    color: var(--neutral-grayish-blue-footer-text);
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .hero-bg {
     position: absolute;
     background-image: url(/images/bg-pattern-intro.svg);
@@ -123,17 +157,24 @@ article {
     z-index: -1;
 }
 .circles_bg {
-    position: relative;
+    position: absolute;
     background-image: url(/images/bg-pattern-circles.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    background-size:contain;
+    width: 140%;
+    height: 140%;
+    bottom:  0;
+    left: -20%;
     z-index: -1;
 }
-
+.phones {
+    margin-top: -15vh;
+    position: relative;
+    z-index: 2;
+    top: 25vh;
+    right: 0;
+    width: 90%;
+}
 .logo {
     width: 100.625px;
     height: 39.432px;
@@ -166,7 +207,7 @@ article {
 
 }
 .hero {
-    color: var(--neutral-white-text);
+    
     padding: 0.7rem;
     text-align: center;
 }
@@ -203,11 +244,14 @@ article {
     justify-content: space-between;
 
 }
-._just-c-c {
-    justify-content: center;
-}
 ._hiden {
     display: none;
+}
+._footer-sub-title {
+    display: block;
+    color: var(--neutral-white-text);
+    font-weight: 500;
+    margin: 1.5rem;
 }
 .green-box {
     border: solid 5px green;
