@@ -14,6 +14,30 @@
     --gradient-mobile-nav-light-red: hsl(353, 100%, 62%);
     --gradient-body-very-dark-gray-blue: hsl(237, 17%, 21%);
     --gradient-body-very-dark-desaturated-blue: hsl(237, 23%, 32%);
+    /* Font size  */
+    --content-text: 1rem;
+    --h3-title: 1.625rem;
+    --h2-title: 1.75rem;
+    --h1-title: 2.4rem;
+    /* Padding  */
+    --padding-container: 1.5625rem;
+    --padding-h3: 2.5rem;
+    --padding-article: 2rem;  
+    --padding-top:3.625rem;
+    --padding-nav: 1.15rem;
+    /* Font weight  */
+    --font-overpass-ligth: 300;
+    --font-overpass-bold: 600;
+    --font-ubuntu-ligth: 400;
+    --font-ubuntu-normal: 500;
+    --font-ubuntu-bold: 700;
+    /* Line height */
+    --line-height: 1.7;
+    /* Font size  */
+    --font-size-px: 16px;
+    --font-size-vw: 4.26vw;
+    /* Radius  */
+    --border-radius: 6.25em;
 }
 *,
 *::after,
@@ -27,8 +51,8 @@ body {
     font-family: 'Overpass', sans-serif;
     color: var(--primary-very-dark-blue-headings);
     overflow-x: hidden;
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: var(--font-size-vw);
+    line-height: var(--line-height);
     min-width: 375px;
 }
 
@@ -45,33 +69,31 @@ li {
     list-style: none;
 }
 h1 {
-    font-size: 2.4rem;
+    font-size: var(--h1-title);
 }
 p {
-    font-size: 1rem;
+    font-size: var(--content-text);
 }
 h2 {
-    font-size: 1.75rem;
-    font-weight: 600;
+    font-size: var(--h2-title);
+    font-weight: var(--font-overpass-bold);
 }
 h3 {
     margin: 2rem 0;
-    padding: 0 2.5rem;
-    font-size: 1.625rem;
-    font-weight: 600;
+    padding: 0 var(--padding-h3);
+    font-size: var(--h3-title);
+    font-weight: var(--font-overpass-bold);
     line-height: 1.8rem;
 }
 main {
     text-align: center;
 }
 article {
-    padding: 0 2rem;
+    padding: 0 var(--padding-article);
 }
 .container {
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
+    padding:  0 var(--padding-container);
 }
-
 .flex {
     display:flex;
 
@@ -82,21 +104,26 @@ article {
     margin: 0 auto;
 }
 .padding-top {
-    padding-top: 3.625rem;
-}   
-
+    padding-top: var(--padding-top);
+} 
 .nav {
-    display: none;
-    border: solid 5px red;
+    /* display: none; */
+    width: 20.3125rem;
+    height: fit-content;
     background-color: white; 
-    padding: 1.15rem 0 1.15rem 0;
-    position: absolute;
+    padding: var(--padding-nav) 0;
+    position: relative;
     top:7%;
     right: 5%;
     left: 5%;
     bottom: 20%;
+    color: var(--primary-very-dark-blue-headings);
+}
+.nav * {
+    text-align: center;
 }
 .nav ul li ul {
+    /* display: block; */
     display: none;
 }
 .top {
@@ -108,7 +135,7 @@ article {
     var(--gradient-mobile-nav-very-light-red), 
     var(--gradient-mobile-nav-light-red)  
     );
-    border-end-start-radius: 6.25em;
+    border-end-start-radius: var(--border-radius);
     overflow: hidden;   
     color: var(--neutral-white-text);
     z-index: 0; 
@@ -123,8 +150,8 @@ article {
     var(--gradient-body-very-dark-gray-blue), 
     var(--gradient-body-very-dark-desaturated-blue)  
     );
-    border-end-start-radius: 6.25em;
-    border-start-end-radius: 6.25em;
+    border-end-start-radius: var(--border-radius);
+    border-start-end-radius: var(--border-radius);
     color: var(--neutral-grayish-blue-footer-text);
     z-index: 0; 
 }
@@ -140,7 +167,7 @@ article {
     var(--neutral-very-dark-black-blue-footer-background), 
     var(--gradient-body-very-dark-gray-blue)  
     );
-    border-start-end-radius: 6.25em;
+    border-start-end-radius: var(--border-radius);
     color: var(--neutral-grayish-blue-footer-text);
     font-family: 'Ubuntu', sans-serif;
 }
@@ -149,11 +176,11 @@ article {
     position: absolute;
     background-image: url(/images/bg-pattern-intro.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 230%;
-    height: 230%;
-    top: -44%;
-    right: -47%;
+    background-size: contain;
+    width: 400%;
+    height: 400%;
+    top: -30%;
+    left: -120%;
     opacity: 0.7;
     z-index: -1;
 }
@@ -194,15 +221,15 @@ article {
 
     color: var(--primary-light-red-CTA-text);
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
+    font-weight: var(--font-ubuntu-bold);
     margin: 1rem 0.3rem;
-    padding: 1em 1rem;
+    padding: 1rem 1rem;
     border-radius: 2rem;
-    border: solid 0.1rem white;
+    border: solid 0.1rem var(--neutral-white-text);
   
 }
 ._clear {
-    padding: 1em 1.5rem;
+    padding: 1rem 1.5rem;
     background-color: transparent;
     color: var(--neutral-white-text);
 
@@ -217,13 +244,16 @@ article {
     font-size: 1.2rem;
     text-align: center;
 }
-.hero h2 {
-    padding: 0.5rem;
-
+.hero h1 {
+    font-size: calc(var(--h1-title) - 0.25rem) ;
 }
+
 ._wh-max {
     width: 100%;
     height: 100%;
+}
+._just-c-sb {
+    justify-content: space-between;
 }
 ._column {
     flex-direction: column;
@@ -241,17 +271,13 @@ article {
     width: 100%;
 
 }
-._just-c-sb {
-    justify-content: space-between;
-
-}
 ._hiden {
     display: none;
 }
 ._footer-sub-title {
     display: block;
     color: var(--neutral-white-text);
-    font-weight: 500;
+    font-weight: var(--font-ubuntu-normal);
     margin: 1.5rem;
 }
 .green-box {
