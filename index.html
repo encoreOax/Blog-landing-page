@@ -16,9 +16,10 @@
 </head>
 
 <body>
+
   <div class="flex _column">
     
-    <header class="flex _column">
+    <header class="flex _column" id="inicio">
       
       <div class="container top">
         
@@ -26,8 +27,8 @@
           <div class="flex _just-c-sb">
 
             <div class="logo _block">Blogr</div>
-            <img src="/images/icon-hamburger.svg" alt="Menu" class="hamburger">
-
+            <div id="ham" class="ham-on vis-visible" ></div>
+           
           </div>
 
           <div class="hero flex _column _just-c-c _wh-max ">
@@ -46,28 +47,32 @@
         <div class="hero-bg"></div>
         
       </div>
-      <nav class="flex _column  nav ">
+      <nav id="nav" class="flex _column  nav vis-hidden">
 
         <ul class="flex_column _just-c-sb _wh-max">
-          <li><a href="#" >Product <span class="nav_icon"></span></a>
-            <ul>
+          <li  class="list">
+            <a class="sub-menu-btn " >Product<span class="nav_icon " ></span></a>
+            <ul class="sub-menu">
               <li><a href="#">Overview</a></li>
               <li><a href="#">Pricing</a></li>
               <li><a href="#">Marketplace</a></li>
               <li><a href="#">Features</a></li>
               <li><a href="#">Integrations</a></li>
             </ul>
+          
           </li>
-          <li><a href="#">Company <span class="nav_icon"></span></a>
-            <ul>
+          <li class="list" >
+            <a class="sub-menu-btn">Company<span class="nav_icon"></span></a>
+            <ul class="sub-menu">
               <li><a href="#">About</a></li>
               <li><a href="#">Team</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Careers</a></li>
             </ul>
           </li>
-          <li><a href="#">Connect <span class="nav_icon"></span></a>
-            <ul>
+          <li class="list" >
+            <a class="sub-menu-btn">Connect<span class="nav_icon"></span></a>
+            <ul class="sub-menu">
               <li><a href="#">Contact</a></li>
               <li><a href="#">Newsletter</a></li>
               <li><a href="#">LinkedIn</a></li>
@@ -191,6 +196,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</br>
     Coded by <a href="https://github.com/encoreOax">Hector Sánchez Coronel</a>.
   </div>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>
